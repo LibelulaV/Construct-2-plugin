@@ -482,8 +482,8 @@ cr.plugins_.CJSAds = function(runtime)
 		if(isAuthenticated){
 			self.runtime.trigger(cr.plugins_.CJSAds.prototype.cnds.onSocialServiceLoginSuccess, self);
 		}else{
-			console.log(error);
-			self.runtime.trigger(cr.plugins_.CJSAds.prototype.cnds.onSocialServiceOpenLeaderBoardClosed, self);
+			console.log(JSON.stringify(error));
+			self.runtime.trigger(cr.plugins_.CJSAds.prototype.cnds.onSocialServiceLoginFailed, self);
 		}
 	};
 	Acts.prototype.socialServiceRequestLogin = function ()
